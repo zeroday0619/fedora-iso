@@ -1,8 +1,0 @@
-summary: Build Azure base image
-discover:
-    how: fmf
-environment:
-    image_type: oem
-    image_profile: Cloud-Base-Azure
-execute:
-    how: tmt
