@@ -1,6 +1,8 @@
 <image>
 	<profiles>
-		<profile name="DesktopCommon" description="Common desktop packages"/>
+		<profile name="DesktopCommon" description="Common desktop packages">
+			<requires profile="t2linux"/>
+		</profile>
 		<profile name="GNOME-Desktop" description="GNOME Desktop">
 			<requires profile="DesktopCommon"/>
 		</profile>

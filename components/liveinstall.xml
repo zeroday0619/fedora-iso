@@ -2,10 +2,11 @@
 	<profiles>
 		<profile name="LiveInstall" description="Live Install ISO">
 			<requires profile="BootCore"/>
+			<requires profile="t2linux"/>
 		</profile>
 	</profiles>
 	<preferences profiles="LiveInstall">
-		<type image="iso" publisher="Fedora Project" volid="Fedora_Linux" primary="true" flags="dmsquash" firmware="uefi" kernelcmdline="quiet rhgb" mediacheck="false">
+		<type image="iso" publisher="t2linux Fedora" volid="t2linux_Fedora" primary="true" flags="dmsquash" firmware="uefi" kernelcmdline="quiet rhgb intel_iommu=on iommu=pt" mediacheck="false">
 			<bootloader name="grub2" grub_template="grub.cfg.iso-template" console="console" timeout="10"/>
 		</type>
 	</preferences>
