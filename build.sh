@@ -10,10 +10,12 @@ function cleanup {
 }
 trap cleanup EXIT
 
+df -h
 for profile in "${profiles[@]}"; do
     profile_builddir="$builddir/$profile";
     mkdir -p $profile_builddir; cd "$profile_builddir"
     /repo/kiwi-build \
+        --debug \
         --image-type=iso \
         --image-profile="$profile" \
         --kiwi-description-dir=/repo/ \

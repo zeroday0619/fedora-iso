@@ -21,6 +21,7 @@ jobs:
               libmagickcore-dev	libmagickwand-dev	libssl-dev \
               mercurial openssh-client p7zip-full	ftp bison
           sudo apt-get autoremove -y
+          sudo df -h
 
       - name: Checkout
         uses: actions/checkout@v3
