@@ -4,7 +4,7 @@ set -e
 profiles=( "Workstation-Live" "KDE-Live" )
 
 mkdir -p /repo/builddir/iso
-builddir=$(mktemp -d); export builddir
+builddir=$(mktemp -d -p /var/tmp); export builddir
 function cleanup {
     rm -rf "$builddir"
 }
